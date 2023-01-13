@@ -30,16 +30,11 @@
       <% end %>
     </ul>
   <% end %>
-  <form>
-    <%= form_with model: @book, url: '/books', method: :post do |f| %>
 
-      <h4>Title</h4>
+  <%= form_with model: @book, url: '/books', method: :post do |f| %>
+    <div class="field">Title</div>
       <%= f.text_field :title %>
-
-      <h4>Body</h4>
+    <div class="field">Body</div>
       <%= f.text_area :body %>
-
-      <p><%= f.submit 'Create Book' %></p>
-    <% end %>
-  </form>
+    <div class="actions"><%= f.submit 'Create Book' %></div>
 </body>
