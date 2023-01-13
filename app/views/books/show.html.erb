@@ -1,7 +1,12 @@
-<p>
-  <strong>Title: </strong><%= @book.title %>
-</p>
+<%= form_with model: @book do |f| %>
+  <p>
+    <strong>Title: </strong><%= @book.title %>
+  </p>
 
-<p>
-  <strong>Body: </strong><%= @book.body %>
-</p>
+  <p>
+    <strong>Body: </strong><%= @book.body %>
+  </p>
+  <%= link_to "Edit", edit_book_path(@book.id)%>
+  |
+  <a href="/books">Back</a>
+<% end %>
