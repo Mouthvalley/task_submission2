@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/homes' => 'homes#top'
 
-  get '/books' => 'books#index'
-  post 'books' => 'books#create'
-  get 'books' => 'books#index'
-  get 'books/:id' => 'books#show', as: 'book'
-  get 'books/:id/edit' => 'books#edit', as: 'edit_book'
-  patch 'books/:id' => 'books#update', as: 'update_book'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # コントローラの同じ名前のアクションに紐づく形で、以下のルーティングを自動生成する
+  resources :books
 end
