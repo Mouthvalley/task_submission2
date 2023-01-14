@@ -1,3 +1,7 @@
+<p class="notice">
+  <%= flash[:notice] %>
+</p>
+
 <%= form_with model: @book do |f| %>
   <p>
     <strong>Title: </strong><%= @book.title %>

@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+p {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
 body {
   background-color: #fff;
   color: #333;
@@ -11,9 +18,17 @@ body {
   margin: 33px;
 }
 
+.notice {
+  color:green;
+}
+
 .field {
   margin-bottom: 10px;
 }
 .actions {
   margin-bottom: 10px;
+}
+
+label {
+    display: block;
 }
