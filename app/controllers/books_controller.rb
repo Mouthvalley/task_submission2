@@ -9,8 +9,8 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to book_path(@book.id)
       flash[:notice] = "Book was successfully created."
+      redirect_to book_path(@book.id)
     else
       @books = Book.all
       render :index
@@ -33,8 +33,8 @@ class BooksController < ApplicationController
       # book_path(@book.id)をURLで表示させると/books/1,2,3...となる
       # book_path = /books 固定
       # (@book:id) = /1,2,3 showの@book = Book.find(params[:id])を参照している
-      redirect_to book_path(@book.id)
       flash[:notice] = "Book was successfully updated."
+      redirect_to book_path(@book.id)
     else
       render :edit
     end
